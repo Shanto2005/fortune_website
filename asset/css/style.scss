@@ -942,6 +942,17 @@ header{
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         }
     }
+    .ln_row{
+        @include maxwidth(991px){
+            flex-wrap: nowrap;
+            overflow-x: auto;
+        }
+    }
+    .latest_col{
+        @include maxwidth(991px){
+            width: auto;
+        }
+    }
     .first_child, .scnd_child{
         @include maxwidth(992px){
             margin-bottom: 30px;

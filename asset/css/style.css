@@ -1013,6 +1013,17 @@ header .chart_icon {
 .latest_news .ln_holder:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+@media screen and (max-width: 991px) {
+  .latest_news .ln_row {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+}
+@media screen and (max-width: 991px) {
+  .latest_news .latest_col {
+    width: auto;
+  }
+}
 @media screen and (max-width: 992px) {
   .latest_news .first_child, .latest_news .scnd_child {
     margin-bottom: 30px;
