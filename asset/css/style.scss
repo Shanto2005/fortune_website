@@ -609,15 +609,41 @@ header{
     padding: 0px;
     background-color: #f7f7f7;
     .cf_holder{
-        max-width: 360px;
+        max-width: unset;
         width: 100%;
         text-align: center;
-        border-right: 1pX solid rgb(128 128 128 / 20%);
+        // border-right: 1pX solid rgb(128 128 128 / 20%);
         &:not(:last-child){
             margin-bottom: 20px;
             margin-left: unset;
         }
-        @include maxwidth(1199px){
+        // @include maxwidth(767px){
+        //     border-left: 1pX solid rgb(128 128 128 / 20%);
+        // }
+    }
+    .innercol{
+        border-right: 1pX solid rgb(128 128 128 / 20%);
+        &:nth-child(1){
+            border-left: 1pX solid rgb(128 128 128 / 20%);
+            @include minwidth(1200px){
+                border-left: 0px;
+            }
+        }
+        &:nth-child(3){
+            border-left: 1pX solid rgb(128 128 128 / 20%);
+            @include minwidth(1200px){
+                border-left: 0px;
+            }
+        }
+        &:nth-child(4){
+            @include minwidth(992px){
+                border-left: 1pX solid rgb(128 128 128 / 20%);
+            }
+            @include minwidth(1200px){
+                border-left: 0px;
+            }
+        }
+        @include maxwidth(767px){
             border-left: 1pX solid rgb(128 128 128 / 20%);
         }
     }
