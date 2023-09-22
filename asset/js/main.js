@@ -30,17 +30,17 @@ var swiper = new Swiper(".headerBanner", {
 });
 
 
-var swiper = new Swiper('.testimonial', {
+var swiper = new Swiper('.testimonial',{
   slidesPerView: 3,
   spaceBetween: 20,
   direction: 'horizontal',
   autoHeight: true,
   height: 600,
   loop: 'true',
-//   autoplay: {
-//     delay: 2500,
-//     disableOnInteraction: false,
-// },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+},
 breakpoints: {
     0: {
       slidesPerView: 1,
@@ -49,7 +49,7 @@ breakpoints: {
     768: {
       slidesPerView: 2,
     },
-    1024: {
+    1200: {
       slidesPerView: 3,
     },
 },

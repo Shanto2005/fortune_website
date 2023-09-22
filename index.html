@@ -51,13 +51,15 @@
                     <div class="search_icon">
                         <div class="dropdown">
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">
+                                data-bs-target="#exampleModal2">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </button>
                         </div>
                     </div>
                     <div class="chart_icon">
-                        <i class="fa-solid fa-cart-shopping"></i>
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
                     </div>
                     <div class="quoet_box">
                         <button class="bttn">GET A QUOET</button>
@@ -66,9 +68,54 @@
             </div>
         </div>
     </header>
+    <!-- cartModalStart -->
+    <!-- Button trigger modal -->
+  
+  <!--card Modal -->
+  <div class="cart_modal">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                <i class="fa-solid fa-circle-check"></i>Added to Beg
+              </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="cardBox">
+                <div class="imgBox">
+                    <img src="asset/images/cardImg.jpg" alt="cart_img">
+                </div>
+                <div class="textBox">
+                    <div class="heading">
+                        <h6>NIkeCourt Air Max Volley</h6>
+                    </div>
+                    <div class="info">
+                        <p>Women's Hard Court TEnnis Shoe</p>
+                    </div>
+                    <div class="size">
+                        <p>size 8</p>
+                    </div>
+                    <div class="price">
+                        <h6>$200</h6>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn button bttn" data-bs-dismiss="modal">View Beg</button>
+              <button type="button" class="btn button bttn">Check Out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+    <!-- cartModalEnd -->
+
     <!-- searchmodalStart -->
     <div class="search_modal">
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -83,6 +130,7 @@
         </div>
     </div>
     <!-- searchmodalEnd -->
+
     <!-- bannersectionStart -->
     <div class="banner_section">
         <div class="swiper headerBanner">
@@ -587,118 +635,104 @@
             <div class="swiper testimonial">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <div class="item">
+                        <div class="slide_holder">
                             <div class="profile">
-                                <div class="img_box">
-                                    <img src="asset/images/testimonil1.png" Alt="img">
+                                <div class="imgBox">
+                                    <img src="asset/images/testimonil1.png" alt="">
                                 </div>
-                                <div class="information">
-                                    <p>Mitchel Harward</p>
-                                    <span>San Fransisco</span>
+                                <div class="infoBox">
+                                    <p>Beally Russel</p>
+                                    <a href="#">California</a>
                                 </div>
                             </div>
                             <div class="text">
-                                <p>They bring a wealth of knowledge as well as a personal touch so often missing from
-                                    other firms, helped us to just have better handle on everything.</p>
-                            </div>
-                            <div class="icon">
-                                <i class="fa fa-quote-right" aria-hidden="true"></i>
+                                <p>It involves an examination of operations which allows their team discuss the art of the possible. They bring a wealth of knowledge, we believe fortune.</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="item">
+                        <div class="slide_holder">
                             <div class="profile">
-                                <div class="img_box">
-                                    <img src="asset/images/testimonial2.png" alt="img">
+                                <div class="imgBox">
+                                    <img src="asset/images/testimonial2.png" alt="">
                                 </div>
-                                <div class="information">
+                                <div class="infoBox">
                                     <p>Beally Russel</p>
-                                    <span>California</span>
+                                    <a href="#">California</a>
                                 </div>
                             </div>
-                            <p>It involves an examination of operations which allows their team discuss the art of the
-                                possible. They bring a wealth of knowledge, we believe fortune.</p>
-                            <div class="icon">
-                                <i class="fa fa-quote-right" aria-hidden="true"></i>
+                            <div class="text">
+                                <p>It involves an examination of operations which allows their team discuss the art of the possible. They bring a wealth of knowledge, we believe fortune.</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="item">
+                        <div class="slide_holder">
                             <div class="profile">
-                                <div class="img_box">
-                                    <img src="asset/images/testimonial3.png" alt="img">
+                                <div class="imgBox">
+                                    <img src="asset/images/testimonial3.png" alt="">
                                 </div>
-                                <div class="information">
-                                    <p>Jenifer Hearly</p>
-                                    <span>Newyork</span>
-                                </div>
-                            </div>
-                            <p>Fortune has helped us to just have a better handle on everything in our business – to
-                                actually make decisions and move forward to grow</p>
-                            <div class="icon">
-                                <i class="fa fa-quote-right" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="item">
-                            <div class="profile">
-                                <div class="img_box">
-                                    <img src="asset/images/testimonil1.png" Alt="img">
-                                </div>
-                                <div class="information">
-                                    <p>Mitchel Harward</p>
-                                    <span>San Fransisco</span>
-                                </div>
-                            </div>
-                            <p>They bring a wealth of knowledge as well as a personal touch so often missing from other
-                                firms, helped us to just have better handle on everything.</p>
-                            <div class="icon">
-                                <i class="fa fa-quote-right" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="item">
-                            <div class="profile">
-                                <div class="img_box">
-                                    <img src="asset/images/testimonial2.png" alt="img">
-                                </div>
-                                <div class="information">
+                                <div class="infoBox">
                                     <p>Beally Russel</p>
-                                    <span>California</span>
+                                    <a href="#">California</a>
                                 </div>
                             </div>
-                            <p>It involves an examination of operations which allows their team discuss the art of the
-                                possible. They bring a wealth of knowledge, we believe fortune.</p>
-                            <div class="icon">
-                                <i class="fa fa-quote-right" aria-hidden="true"></i>
+                            <div class="text">
+                                <p>It involves an examination of operations which allows their team discuss the art of the possible. They bring a wealth of knowledge, we believe fortune.</p>
                             </div>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <div class="item">
+                    <div class="slide_holder">
+                        <div class="profile">
+                            <div class="imgBox">
+                                <img src="asset/images/testimonil1.png" alt="">
+                            </div>
+                            <div class="infoBox">
+                                <p>Beally Russel</p>
+                                <a href="#">California</a>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <p>It involves an examination of operations which allows their team discuss the art of the possible. They bring a wealth of knowledge, we believe fortune.</p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide_holder">
                             <div class="profile">
-                                <div class="img_box">
-                                    <img src="asset/images/testimonial3.png" alt="img">
+                                <div class="imgBox">
+                                    <img src="asset/images/testimonial2.png" alt="">
                                 </div>
-                                <div class="information">
-                                    <p>Jenifer Hearly</p>
-                                    <span>Newyork</span>
+                                <div class="infoBox">
+                                    <p>Beally Russel</p>
+                                    <a href="#">California</a>
                                 </div>
                             </div>
-                            <p>Fortune has helped us to just have a better handle on everything in our business – to
-                                actually make decisions and move forward to grow</p>
-                            <div class="icon">
-                                <i class="fa fa-quote-right" aria-hidden="true"></i>
+                            <div class="text">
+                                <p>It involves an examination of operations which allows their team discuss the art of the possible. They bring a wealth of knowledge, we believe fortune.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide_holder">
+                            <div class="profile">
+                                <div class="imgBox">
+                                    <img src="asset/images/testimonial3.png" alt="">
+                                </div>
+                                <div class="infoBox">
+                                    <p>Beally Russel</p>
+                                    <a href="#">California</a>
+                                </div>
+                            </div>
+                            <div class="text">
+                                <p>It involves an examination of operations which allows their team discuss the art of the possible. They bring a wealth of knowledge, we believe fortune.</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
+    </div>
     </section>
     <!-- testimonialEnd -->
     <div class="latest_project choos_fourtunre">
@@ -876,7 +910,7 @@
                                 <div class="date">
                                     <p>by admin | May 24, 2022</p>
                                 </div>
-                                <div class="heading">
+                                <div class="heading_box">
                                     <h6>Retail banks wake up to digital</h6>
                                 </div>
                                 <div class="text">
@@ -1147,6 +1181,23 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_btm">
+            <div class="container">
+                <div class="ft_content">
+                    <div class="ftC_left">
+                        <p>Copyrights © 2022 All Rights Reserved by <span>SteelThemes.</span></p>
+                    </div>
+                    <div class="ftC_right">
+                        <ul>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
