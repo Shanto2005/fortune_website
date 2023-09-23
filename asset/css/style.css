@@ -1398,21 +1398,34 @@ header .btn:hover {
   background-color: rgba(72, 198, 236, 0.9254901961);
 }
 .bannerSection .hedingBox {
-  min-height: 400px;
+  min-height: 250px;
   color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+@media screen and (min-width: 768px) {
+  .bannerSection .hedingBox {
+    min-height: 300px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .bannerSection .hedingBox {
+    min-height: 400px;
+  }
+}
 
 .breadcomebSection .breadcrumb {
   color: #000;
   margin-bottom: 0px;
   align-items: center;
+  padding: 20px 0px;
 }
 .breadcomebSection .breadcrumb .active {
   color: #48c7ec;
+  display: flex;
+  align-items: center;
 }
 .breadcomebSection .breadcrumb .active::before {
   content: ">";
@@ -1423,11 +1436,11 @@ header .btn:hover {
   text-decoration: none;
 }
 
-.services_slide {
-  padding: 50px 0px;
-}
 .services_slide .ln_holder {
   overflow: hidden;
+}
+.services_slide .ln_holder:hover {
+  box-shadow: unset;
 }
 .services_slide .ln_holder:hover .img_box {
   transform: scale(1.1);

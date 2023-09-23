@@ -1325,12 +1325,18 @@ header{
         background-color: #48c6ecec;
     }
     .hedingBox{
-        min-height: 400px;
+        min-height: 250px;
         color: $secondaryColor;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        @include minwidth(768px){
+            min-height: 300px;
+        }
+        @include minwidth(992px){
+            min-height: 400px;
+        }
     }
 }
 .breadcomebSection{
@@ -1338,8 +1344,11 @@ header{
         color: #000;
         margin-bottom: 0px;
         align-items: center;
+        padding: 20px 0px;
         .active{
             color: $primaryColor;
+            display: flex;
+            align-items: center;
         }
         .active{
             &::before{
@@ -1354,10 +1363,10 @@ header{
     }
 }
 .services_slide{
-    padding: 50px 0px;
     .ln_holder{
         overflow: hidden;
         &:hover{
+            box-shadow: unset ;
             .img_box{
                 transform: scale(1.1);
             }
