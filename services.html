@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="asset/css/bootstrap.min.css">
+    <link rel="stylesheet" href="asset/css/mmenu-light.css">
+    <link rel="stylesheet" href="asset/css/style.css">
+</head>
+<body>
+    
+    <header id="header" data-aos="fade-down">
+        <div class="container">
+            <div class="headerContentm">
+                <a href="#"><img src="asset/images/logo.png" alt="header_logo"></a>
+            </div>
+            <div class="headerContent">
+                <div class="headerLogoBox">
+                    <a href="#"><img src="asset/images/logo.png" alt="header_logo"></a>
+                </div>
+                <div class="headerMenuBox">
+                    <div class="mmnenu_box">
+                        <a href="#mntk_mmenu" class="mmenuButton"><i class="fa-solid fa-bars"></i></a>
+                        <nav id="mntk_mmenu">
+                            <ul>
+                                <li><a href="index.html">HOME</a></li>
+                                <li><a href="#">ABOUT US</a></li>
+                                <li><a href="services.html">SERVICES</a></li>
+                                <li><a href="#">SHOP</a></li>
+                                <li><a href="#">CONTACT US</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="dmnenu_box">
+                        <ul>
+                            <li><a href="index.html">HOME</a></li>                            
+                            <li><a href="#">ABOUT US</a></li>
+                            <li><a href="services.html">SERVICES</a></li>
+                            <li><a href="#">SHOP</a></li>
+                            <li><a href="#">CONTACT US</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="headerSearchBox">
+                    <div class="search_icon">
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal2">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="chart_icon">
+                        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                    <div class="quoet_box">
+                        <button class="bttn">GET A QUOET</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- cartModalStart -->
+  <div class="cart_modal">
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                <i class="fa-solid fa-circle-check"></i>Added to Beg
+              </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="cardBox">
+                <div class="imgBox">
+                    <img src="asset/images/cardImg.jpg" alt="cart_img">
+                </div>
+                <div class="textBox">
+                    <div class="heading">
+                        <h6>NIkeCourt Air Max Volley</h6>
+                    </div>
+                    <div class="info">
+                        <p>Women's Hard Court TEnnis Shoe</p>
+                    </div>
+                    <div class="size">
+                        <p>size 8</p>
+                    </div>
+                    <div class="price">
+                        <h6>$200</h6>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn button bttn" data-bs-dismiss="modal">View Beg</button>
+              <button type="button" class="btn button bttn">Check Out</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+    <!-- cartModalEnd -->
+
+    <!-- searchmodalStart -->
+    <div class="search_modal">
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <form class="modal_form d-flex" role="search">
+                            <input class="form-control searchInput" type="search" placeholder="Search"
+                                aria-label="Search">
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- searchmodalEnd -->
+
+    <div class="bannerSection">
+        <div class="bgImg" style="background-image: url('asset/images/aboutIUs_banner.jpeg');">
+            <div class="overlayer">
+                <div class="container">
+                    <div class="hedingBox">
+                        <h1>View All Services</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="breadcomebSection">
+        <div class="container">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Library</li>
+            </ol>
+        </div>
+    </div>
+    <div class="services_slide latest_news">
+        <div class="container">
+            <div class="ln_content" data-aos="fade-up">
+                <div class="row row-gap-4 ln_row">
+                    <div class="col-md-6 col-lg-4 latest_col">
+                        <div class="ln_holder first_child">
+                            <div class="img_box">
+                                <img src="asset/images/about_slide1.jpg" alt="ln1">
+                            </div>
+                            <div class="content_box">
+                                <div class="heading">
+                                    <h6>Retail banks wake up to digital</h6>
+                                </div>
+                                <div class="text">
+                                    <p>The great explorer of the truth, the master-builder of human ...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 latest_col">
+                        <div class="ln_holder scnd_child">
+                            <div class="img_box">
+                                <img src="asset/images/about_slide2.jpg" alt="ln2">
+                            </div>
+                            <div class="content_box">
+                                <div class="heading">
+                                    <h6>Retail banks wake up to digital</h6>
+                                </div>
+                                <div class="text">
+                                    <p>The great explorer of the truth, the master-builder of human ...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 latest_col">
+                        <div class="ln_holder third_child">
+                            <div class="img_box">
+                                <img src="asset/images/about_slide3.jpg" alt="ln3">
+                            </div>
+                            <div class="content_box">
+                                <div class="heading">
+                                    <h6>Retail banks wake up to digital</h6>
+                                </div>
+                                <div class="text">
+                                    <p>The great explorer of the truth, the master-builder of human ...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 latest_col">
+                        <div class="ln_holder first_child">
+                            <div class="img_box">
+                                <img src="asset/images/about_slide4.jpg" alt="ln1">
+                            </div>
+                            <div class="content_box">
+                                <div class="heading">
+                                    <h6>Retail banks wake up to digital</h6>
+                                </div>
+                                <div class="text">
+                                    <p>The great explorer of the truth, the master-builder of human ...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 latest_col">
+                        <div class="ln_holder scnd_child">
+                            <div class="img_box">
+                                <img src="asset/images/about_slide5.jpg" alt="ln2">
+                            </div>
+                            <div class="content_box">
+                                <div class="heading">
+                                    <h6>Retail banks wake up to digital</h6>
+                                </div>
+                                <div class="text">
+                                    <p>The great explorer of the truth, the master-builder of human ...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 latest_col">
+                        <div class="ln_holder third_child">
+                            <div class="img_box">
+                                <img src="asset/images/about_slide6.jpg" alt="ln3">
+                            </div>
+                            <div class="content_box">
+                                <div class="heading">
+                                    <h6>Retail banks wake up to digital</h6>
+                                </div>
+                                <div class="text">
+                                    <p>The great explorer of the truth, the master-builder of human ...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer_top servicesSection">
+            <div class="container">
+                <div class="ft_content">
+                    <div class="row row-gap-5 row-gap-lg-0">
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="ft_holder">
+                                <div class="ft_imgBox">
+                                    <a href="#">
+                                        <img src="asset/images/footerLogo.png" alt="ftLogo">
+                                    </a>
+                                </div>
+                                <div class="contentBox">
+                                    <p>Our team offers the most up-to-date, sustainable manufacturing solutions. teachings of the great explorer of the truth We only source materials from tried and trusted suppliers.</p>
+                                </div>
+                                <div class="servuce_link">
+                                    <a href="#">MORE PROJECT
+                                        <i class="fa-solid fa-angle-right"></i>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="ft_holder">
+                                <div class="heading">
+                                    <h4>What We Do</h4>
+                                </div>
+                                <div class="list_Box">
+                                    <ul>
+                                        <li><a href="#">Business Growth</a></li>
+                                        <li><a href="#">Sustainability</a></li>
+                                        <li><a href="#">Performance</a></li>
+                                        <li><a href="#">Advanced Analytics</a></li>
+                                        <li><a href="#">Organization</a></li>
+                                        <li><a href="#">Customer Insights</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="ft_holder">
+                                <div class="heading">
+                                    <h4>Latest News</h4>
+                                </div>
+                                <div class="news_sl_top">
+                                    <div class="content">
+                                        <p>How to improve employees skills</p>
+                                    </div>
+                                    <div class="dateBox">
+                                        <h6>May 24, 2022</h6>
+                                    </div>
+                                </div>
+                                <div class="news_sl_btm">
+                                    <div class="content">
+                                        <p>Create great WordPress theme</p>
+                                    </div>
+                                    <div class="dateBox">
+                                        <h6>May 24, 2022</h6>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                            <div class="ft_holder">
+                                <div class="heading">
+                                    <h4>Contact Us</h4>
+                                </div>
+                                <div class="adress_box">
+                                    <div class="address_content">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-phone"></i>
+                                        </div>
+                                        <div class="text">
+                                            <span>22/121 Apple Street, New York, NY 10012, USA</span>
+                                        </div>
+                                    </div>
+                                    <div class="address_content">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-envelope"></i>
+                                        </div>
+                                        <div class="text">
+                                            <span><span>Phone: +123-456-7890</span></span>
+                                        </div>
+                                    </div>
+                                    <div class="address_content">
+                                        <div class="icon">
+                                            <i class="fa-solid fa-paper-plane"></i>
+                                        </div>
+                                        <div class="text">
+                                            <span><span><span>Mail@Fortuneteam.com</span></span></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="iconBox">
+                                    <ul>
+                                        <li><a href="#"><i class="fa-solid fa-globe"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                        <li><a href="#"><i class="fa-brand fa-skype"></i></a></li>
+                                        <li><a href="#"><i class="fa-solid fa-globe"></i></a></li>
+                                        <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_btm">
+            <div class="container">
+                <div class="ft_content">
+                    <div class="ftC_left">
+                        <p>Copyrights © 2022 All Rights Reserved by <span>SteelThemes.</span></p>
+                    </div>
+                    <div class="ftC_right">
+                        <ul>
+                            <li><a href="#">Legal</a></li>
+                            <li><a href="#">Sitemap</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Condition</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="asset/js/bootstrap.bundle.min.js"></script>
+    <script src="asset/js/mmenu-light.js"></script>
+    <script src="asset/js/main.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>

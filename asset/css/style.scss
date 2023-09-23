@@ -31,24 +31,11 @@ h1,
     font-size: 26px;
     font-weight: 800;
 
-    @include minwidth(576px) {
-        font-size: 30px;
-    }
-
     @include minwidth(768px) {
         font-size: 42px;
     }
-
-    @include minwidth(992px) {
-        font-size: 58px;
-    }
-
-    @include minwidth(1200px) {
-        font-size: 72px;
-    }
-
     @include minwidth(1400px) {
-        font-size: 88px;
+        font-size: 53px;
     }
 }
 
@@ -71,7 +58,7 @@ h2,
 
 h3,
 .h3 {
-    font-size: 25px;
+    font-size: 22px;
     @include minwidth(992px) {
         font-size: 34px;
     }
@@ -921,6 +908,11 @@ header{
             padding: 0px 20px;
         }
     }
+    .text{
+        p{
+            margin-bottom: 10px;
+        }
+    }
     .servuce_link{
         color: $primaryColor;
         a{
@@ -992,9 +984,12 @@ header{
 .latest_news{
     .ln_holder{
         max-width: 370px;
+        height: 100%;
         margin: auto;
+        border: 1px solid #f4f4f4;
         &:hover{
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border: 1px transparent;
         }
     }
     .ln_row{
@@ -1009,7 +1004,6 @@ header{
         }
     }
     .heading{
-        padding-bottom: 25px;
         h3{
             position: relative;
             &::after{
@@ -1034,7 +1028,6 @@ header{
         }
     }
     .content_box{
-        border: 1px solid #f4f4f4;
         padding: 20px 10px 0px;
         p{
             color: #848484;
@@ -1091,12 +1084,6 @@ header{
         @include minwidth(992px){
             margin-bottom: 15px;
         }
-        h3{
-            text-align: center;
-            @include maxwidth(768px){
-                font-size: 25px;
-            }
-        }
     }
     .aword_holder{
         color: $secondaryColor;
@@ -1112,10 +1099,8 @@ header{
     .aword_img{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        @include minwidth(576px){
-            justify-content: center;
-        }
+        justify-content: center;
+        align-items: center;
         @include minwidth(1200px){
             justify-content: space-between;
         }
@@ -1145,7 +1130,9 @@ header{
         }
     }
     .imgBOx{
+        width: 70px;
         @include minwidth(576px){
+            width: 100px;
             &:not(:first-child){                
                 padding-left: 40px;
             }
@@ -1158,12 +1145,12 @@ header{
 
 .footer_top{
     background-color: #000;
-    padding: 30px 0px;
+    padding: 30px 0px 20px;
     @include minwidth(768px){
-        padding: 50px 0px;
+        padding: 50px 0px 0px;
     }
     @include minwidth(1400px){
-        padding: 80px 0px;
+        padding: 80px 0px 40px;
     }
     .ft_holder{
         &:not(:last-child){
@@ -1293,6 +1280,7 @@ header{
     background-color: #0c0c0c;
     .ft_content{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         padding: 30px 0px;
@@ -1321,5 +1309,65 @@ header{
     a{
         color: inherit;
         text-decoration: none;
+    }
+}
+
+// aboutUs
+.bannerSection{
+    .bgImg{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;        
+    }
+    .overlayer{
+        width: 100%;
+        height: 100%;
+        background-color: #48c6ecec;
+    }
+    .hedingBox{
+        min-height: 400px;
+        color: $secondaryColor;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+.breadcomebSection{
+    .breadcrumb{
+        color: #000;
+        margin-bottom: 0px;
+        align-items: center;
+        .active{
+            color: $primaryColor;
+        }
+        .active{
+            &::before{
+                content: "\3e";
+                font-size: 20px;
+            }
+        }
+        a{
+            color: inherit;
+            text-decoration: none;        
+        }
+    }
+}
+.services_slide{
+    padding: 50px 0px;
+    .ln_holder{
+        overflow: hidden;
+        &:hover{
+            .img_box{
+                transform: scale(1.1);
+            }
+            .heading{
+                color: $primaryColor;
+            }
+        }
+    }
+    .img_box{
+        overflow: hidden;
+        transition: 0.4s;
     }
 }
