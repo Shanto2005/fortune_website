@@ -117,10 +117,10 @@ select {
     }
 
     &::placeholder {
-        font-size: 15px;
+        font-size: 14px;
         color: #858585;
         @include minwidth(1200px) {
-            font-size: 17px;
+            font-size: 16px;
         }
     }
 }
@@ -1378,5 +1378,172 @@ header{
     .img_box{
         overflow: hidden;
         transition: 0.4s;
+    }
+}
+
+// contactUS
+
+.contactUs_heading{
+    .heading{
+        padding: 15px 0px 25px;
+    }
+    h3{
+        position: relative;
+        &::before{
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 3px;
+            background-color: $primaryColor;
+            bottom: -10px;
+            left: 0px;
+        }
+    } 
+}
+.contact_details{
+    padding: 30px 0px;
+    .accordion-item{
+        border-radius: unset;
+        // background-color: #f7f7f7;
+        border: unset;
+        margin-bottom: 10px;
+    }
+    .accordion-button{
+        background-color: #f7f7f7;
+        font-weight: 600;
+        &:focus{
+            box-shadow: unset;
+        }
+    }
+    .accordion-body{
+        border: 1px solid #f7f7f7;
+        padding: 20px 45px 0px;
+    }
+    .ac_loaction{
+        position: relative;
+        display: block;
+        margin-left: 15px;
+        &::before{
+            content: "\f015";
+            position: absolute;
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 20px;
+            color: $primaryColor;left: -40px;
+            display: flex;
+            align-items: flex-start;
+        }
+        span{
+            font-weight: 600;
+            &:first-child{
+                display: inline-block;
+            }
+            display: block;
+        }
+    }
+    .ac_number{
+        &::before{
+            content: "\f095";
+        }
+    }
+    .ac_mall{
+        &::before{
+            content: "\f0e0";
+        }
+    }
+    .ac_op_time{
+        &::before{
+            content: "\f017";
+        }
+    }
+    .ac_Rloaction{
+        &::before{
+            content: "\f3c5";
+        }
+    }
+    .ac_earth{
+        &::before{
+            content: "\f0ac";
+        }
+    }
+    .ac_time{
+        &::before{
+            content: "\f017";
+        }
+    }
+    .location_map{
+        @include maxwidth(767px){
+            height: 200px;
+        }
+    }
+}
+.contact_input{
+    padding: 0px 0px 30px;
+    .heading{
+        margin-bottom: 30px;
+        h3{
+            position: relative;
+            &::before{
+                position: absolute;
+                content: '';
+                width: 50px;
+                height: 3px;
+                background-color: $primaryColor;
+                bottom: -10px;
+                left: 0px;
+            }
+        } 
+    }
+    .input_col{
+        height: 45px;
+        @include minwidth(992px){            
+            height: 60px;
+        }
+        input{
+            height: 100%;
+        }
+    }
+    textarea{
+        height: 100%;
+    }
+    .bttn{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .author_box{
+        background-color: #f7f7f7;
+        padding: 20px;
+    }
+    .item{
+        background-color: #fff;
+        padding: 15px;
+        .itemContent{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .imgBox{
+        display: table-cell;
+        vertical-align: top;
+        img{
+            height: 75px;
+            object-fit: cover;
+        }
+    }
+    .content{
+        margin-left: 20px;
+        h6{
+            color: $primaryColor;
+            margin-bottom: 0px;
+            line-height: 1.9;
+        }
+        p{
+            margin-bottom: 0px;
+            i{
+                color: $primaryColor;
+                margin-right: 10px;
+
+            }
+        }
     }
 }
