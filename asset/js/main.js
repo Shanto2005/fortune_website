@@ -37,10 +37,10 @@ var swiper = new Swiper('.testimonial',{
   autoHeight: true,
   height: 600,
   loop: 'true',
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-},
+//   autoplay: {
+//     delay: 2500,
+//     disableOnInteraction: false,
+// },
 breakpoints: {
     0: {
       slidesPerView: 1,
@@ -116,6 +116,26 @@ var swiper = new Swiper('.sponsor_swiper', {
     },
     1400: {
       slidesPerView: 5,
+    },
+  },
+});
+var swiper = new Swiper('.ab_slider', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  direction: 'horizontal',
+  autoHeight: true,
+  loop: 'true',
+  height: 600,
+  // autoplay: {
+  //   delay: 2500,
+  //   disableOnInteraction: false,
+  // },
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  breakpoints: {
+    992: {
+      slidesPerView: 2,
     },
   },
 });

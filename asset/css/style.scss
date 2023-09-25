@@ -94,6 +94,7 @@ input[type=password],
 input[type=tel],
 input[type=url],
 input[type=search],
+input[type=submit],
 [type=number],
 [type=file],
 textarea,
@@ -117,10 +118,10 @@ select {
     }
 
     &::placeholder {
-        font-size: 15px;
+        font-size: 14px;
         color: #858585;
         @include minwidth(1200px) {
-            font-size: 17px;
+            font-size: 16px;
         }
     }
 }
@@ -207,6 +208,22 @@ th {
             left: 0;
             right: 0;
             opacity: 1;
+        }
+    }
+}
+.heading{
+    text-align: center;
+    h3{
+        position: relative;
+        &::after{
+            position: absolute;
+            content: '';
+            width: 50px;
+            height: 3px;
+            bottom: -15px;
+            left: 50%;
+            margin-left: -30px;
+            background-color: $primaryColor;
         }
     }
 }
@@ -775,6 +792,10 @@ header{
 // servicesSectionEnd
 // aboutus_sectionStart
 .aboutus_section{
+    padding: 30px 0px;
+    @include minwidth(992px){
+        padding: 50px 0px;
+    }
     .aboutus_content{
         display: flex;
         flex-wrap: wrap;
@@ -1003,20 +1024,6 @@ header{
             width: auto;
         }
     }
-    .heading{
-        h3{
-            position: relative;
-            &::after{
-                position: absolute;
-                content: '';
-                width: 50px;
-                height: 3px;
-                bottom: -15px;
-                left: 0;
-                background-color: $primaryColor;
-            }
-        }
-    }
     .first_child, .scnd_child{
         @include maxwidth(992px){
             margin-bottom: 30px;
@@ -1052,18 +1059,6 @@ header{
     }
     .heading{
         margin-bottom: 40px;
-        h3{
-            position: relative;
-            &::before{
-                content: '';
-                position: absolute;
-                width: 60px;
-                height: 3px;
-                background-color: $primaryColor;
-                bottom: -6px;
-                left: 0px;
-            }
-        }
     }
 }
 // sponsoesectioEnd
@@ -1312,7 +1307,7 @@ header{
     }
 }
 
-// aboutUs
+// serviceUs
 .bannerSection{
     .bgImg{
         background-position: center;
@@ -1363,11 +1358,24 @@ header{
     }
 }
 .services_slide{
+    .ln_row{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        @include minwidth(1200px){
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+    .latest_col{
+        width: auto;
+    }
     .ln_holder{
         overflow: hidden;
+        border: 1px solid #f4f4f4;
+        max-width: 350px;
         &:hover{
             box-shadow: unset ;
-            .img_box{
+            img{
                 transform: scale(1.1);
             }
             .heading{
@@ -1377,6 +1385,449 @@ header{
     }
     .img_box{
         overflow: hidden;
+        img{
+            transition: 0.4s;
+        }
+    }
+    .content_box{
+        padding: 20px 10px 0px;
+    }
+}
+
+// contactUS
+
+.contactUs_heading{
+    .heading{
+        padding: 15px 0px 25px;
+    }
+}
+.contact_details{
+    padding: 30px 0px;
+    .accordion-item{
+        border-radius: unset;
+        // background-color: #f7f7f7;
+        border: unset;
+        margin-bottom: 10px;
+    }
+    .accordion-button{
+        background-color: #f7f7f7;
+        font-weight: 600;
+        &:focus{
+            box-shadow: unset;
+        }
+    }
+    .accordion-body{
+        border: 1px solid #f7f7f7;
+        padding: 20px 45px 0px;
+    }
+    .ac_loaction{
+        position: relative;
+        display: block;
+        margin-left: 15px;
+        &::before{
+            content: "\f015";
+            position: absolute;
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            font-size: 20px;
+            color: $primaryColor;left: -40px;
+            display: flex;
+            align-items: flex-start;
+        }
+        span{
+            font-weight: 600;
+            &:first-child{
+                display: inline-block;
+            }
+            display: block;
+        }
+    }
+    .ac_number{
+        &::before{
+            content: "\f095";
+        }
+    }
+    .ac_mall{
+        &::before{
+            content: "\f0e0";
+        }
+    }
+    .ac_op_time{
+        &::before{
+            content: "\f017";
+        }
+    }
+    .ac_Rloaction{
+        &::before{
+            content: "\f3c5";
+        }
+    }
+    .ac_earth{
+        &::before{
+            content: "\f0ac";
+        }
+    }
+    .ac_time{
+        &::before{
+            content: "\f017";
+        }
+    }
+    .location_map{
+        @include maxwidth(767px){
+            height: 200px;
+        }
+    }
+}
+.contact_input{
+    padding: 0px 0px 30px;
+    .heading{
+        margin-bottom: 30px;
+    }
+    .input_col{
+        height: 45px;
+        @include minwidth(992px){            
+            height: 60px;
+        }
+        input{
+            height: 100%;
+        }
+    }
+    textarea{
+        height: 100%;
+    }
+    .bttn{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .author_box{
+        background-color: #f7f7f7;
+        padding: 20px;
+    }
+    .item{
+        background-color: #fff;
+        padding: 15px;
+        .itemContent{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .imgBox{
+        display: table-cell;
+        vertical-align: top;
+        img{
+            height: 75px;
+            object-fit: cover;
+        }
+    }
+    .content{
+        margin-left: 20px;
+        h6{
+            color: $primaryColor;
+            margin-bottom: 0px;
+            line-height: 1.9;
+        }
+        p{
+            margin-bottom: 0px;
+            i{
+                color: $primaryColor;
+                margin-right: 10px;
+
+            }
+        }
+    }
+}
+
+// aboutUs
+.about_us{
+    background: #f7f7f7;
+    padding: 30px 0px 0px;
+    @include minwidth(992px){
+        padding: 50px 0px 20px;
+    }
+    .heading{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .ln_holder{
+        &:hover{
+            img{
+                transform: unset;
+            }
+            h6{
+                color: $primaryColor;
+            }
+        }
+    }
+    .img_box{
+        position: relative;
+        overflow: unset;        
+    }
+    .innerBOx{
+        position: absolute;
+        left: 0;
+        bottom: -20px;
+        background-color: $primaryColor;
+        p{
+            color: $secondaryColor;
+            padding: 5px 10px;
+            margin-bottom: 0px;
+        }
+    }
+    .content_box{
+        margin-top: 20px;
+        h3{
+            left: 50%;
+        }
+    }
+    .cheading{
+        text-align: left;
+    }
+}
+.aboutUs_first{
+    p{
+        color: #848484;
+    }
+    .card{
+        border-radius: unset;
+        border: unset;
+        max-width: 312px;
+    }
+    .cardHeading{
+        margin-top: 20px;
+    }
+    .ab_col{
+        @include maxwidth(1199px){
+            width: auto;
+        }
+    }
+    .left_btm{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        .bttn{
+            color: $primaryColor;
+            &:hover{
+                color: $secondaryColor;
+            }
+        }        
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+    .sing_img{
+        width: 100px;
+    }
+}
+.samrt_approach{
+    padding: 30px 0px;
+    @include minwidth(992px){
+        padding: 50px 0px;
+    }
+    .sp_row{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    .sa_content{
+        text-align: center;
+    }
+    .sp_holder{
+        height: 100%;
         transition: 0.4s;
+        padding: 50px 0px 0;
+        &:hover{
+            background-color: $primaryColor;
+            i{
+                color: $secondaryColor;
+            }
+            .heading{
+                color: $secondaryColor;
+            }
+            .textBox{
+                color: $secondaryColor;
+            }
+        }
+    }
+    .iconBox{
+        margin-bottom: 15px;
+        i{
+            font-size: 50px;
+            color: $primaryColor;
+        }
+    }
+    .textBox{
+        margin-top: 15px;
+    }
+}
+.ab_cardSec{
+    .overlayer{
+        background-color: #000000d0;
+        padding: 30px 0px;
+        @include minwidth(992px){
+            padding: 50px 0px;
+        }
+    }
+    .heading{
+        color: $secondaryColor;
+        text-align: left;
+        h3{
+            &::after{
+                left: 0px;
+                margin-left: 0px;
+            }
+        }
+    }
+    .ab_cardrow{
+        flex-wrap: nowrap;
+        overflow-x: auto;
+    }
+    .ab_cardCol{
+        @include maxwidth(992px){
+            width: auto;
+        }
+    }
+    .abCard_holder{
+        max-width: 270px;
+    }
+    .card{
+        text-align: center;
+        border-radius: unset;
+        border: unset;
+        background-color: transparent;
+        &:hover{
+            .hoverBox{
+                visibility: visible;
+            }
+        }
+    }
+    .imgBox{
+        position: relative;
+        .hoverBox{
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+            visibility: hidden;
+            background-color: $primaryColor;
+            display: flex;
+            justify-content: center;
+        }
+        .iconBox{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #1a2228;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .infoBox{
+        padding: 10px 10px;
+        border: 1px solid #1a2228;
+        color: $primaryColor;
+        margin-top: 15px;
+        h6{
+            color: $secondaryColor;
+        }
+        a{
+            color: inherit;
+            text-decoration: none;
+        }
+    }
+}
+.ab_slideSection{
+    padding: 30px 0px;
+    @include minwidth(992px){
+        padding: 50px 0px;
+    }
+    .abSlide_holder{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .imgBox{
+            width: 100%;
+        }
+    }
+    .ab_slider{
+        padding: 30px 0px 0px;
+        overflow-y: unset;
+        .swiper-pagination{
+            bottom: -20px;
+        }
+        
+    }
+    .contentBox{
+        margin-left: 19px;
+        .date{
+            color: $primaryColor;
+        }
+        p{
+            margin-bottom: 10px;
+        }
+    }
+}
+.ab_sebSecstion{
+    .bgImg{
+        background-size: cover;
+        padding: 30px 0px 20px;
+        @include minwidth(992px){
+            padding: 72px 0px;
+        }
+    }
+    .heading_box{
+        margin-bottom: 20px;
+    }
+    .subs_content{
+        text-align: center;
+        color: $secondaryColor;
+    }
+    .text_box{
+        br{
+            display: none;
+            @include minwidth(992px){
+                display: block;
+            }
+        }
+        p{
+            margin-bottom: 30px;
+        }
+    }
+    .input_content{
+        @include minwidth(768px){
+            display: flex;
+            justify-content: center;
+        }
+        margin-top: 25px;
+    }
+    .inputBox{
+        width: 100%;
+        @include minwidth(992px){
+            width: 50%;
+        }
+        input{
+            width: 100%;
+            position: relative;
+            &::after{
+                position: absolute;
+                content: "\f0e";
+                font-weight: 900;
+                font-family: "Font Awesome 6 Free";
+                left: 0;
+            }
+        }
+    }
+    .submit_box{
+        width: 30%;
+        @include minwidth(768px){
+            margin-left: 15px;
+            width: 20%;
+        }
+        @include minwidth(992px){
+            width: 10%;
+        }
+        input{
+            background-color: $primaryColor;
+            color: $secondaryColor;
+        }
     }
 }
