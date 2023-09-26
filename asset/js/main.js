@@ -134,6 +134,9 @@ var swiper = new Swiper('.ab_slider', {
     el: ".swiper-pagination",
   },
   breakpoints: {
+    576: {
+      slidesPerView: 2,
+    },
     992: {
       slidesPerView: 2,
     },
